@@ -231,7 +231,7 @@ export class DataPreview extends Component {
                             </tr>
                             <br />
                             <tr>
-                                <td> <button className="btn btn-primary" onClick={this.getInfo(true)} >Prikazi </button></td>
+                                <td> <button className="btn btn-primary" onClick={this.getInfo(true)} >Pretraži</button></td>
                             </tr>
                         </tbody>
                     </table>

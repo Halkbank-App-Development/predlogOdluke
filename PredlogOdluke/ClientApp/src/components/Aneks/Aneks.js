@@ -27,7 +27,7 @@ export class Aneks extends Component {
             const response = await fetch('home/ValidateUser/');
             const data = await response.json();
             console.log(data);
-            this.setState({vrabotenID: data.code });
+            this.setState({ vrabotenID: data.code });
         };
     }
 
@@ -58,7 +58,7 @@ export class Aneks extends Component {
                 <div className="form-row">
                     <div className="form-group col-md-4">
                         Uslovi plasmana koji se aneksiraju:
-                                 <select id={item.id} className="form-control" name="predlogValue1" defaultValue="Vrsta kreditnog zahteva:" onChange={this.onInputChange}>
+                                 <select id={item.id} className="form-control" name="predlogValue1" value="Vrsta kreditnog zahteva:" onChange={this.onInputChange}>
                             {list}
                         </select>
                     </div>
@@ -187,7 +187,7 @@ export class Aneks extends Component {
         data.predlog = this.state.items;
 
         console.log('data ->> ', data);
-        debugger;
+        // debugger;
 
         const response =
             await
@@ -217,7 +217,6 @@ export class Aneks extends Component {
                     <option key={i} value={item.vrstaZahteva}>{item.vrstaZahteva}</option>
                 )
             })
-        debugger;
         let predlog = predlogIzmeneList.length > 0
             && predlogIzmeneList.map((item, i) => {
                 return (
@@ -243,7 +242,7 @@ export class Aneks extends Component {
                 <br />
                 <br />
                 <fieldset>
-                    <div className="card col-12 col-lg-4 login-card mt-2 hv-center" style={{ "float": "left", "paddingLeft": "5px", "paddingRight": "5px", "paddingTop": "0px", "display": "block" }}>
+                    <div className="card col-12 col-lg-5 login-card mt-2 hv-center" style={{ "float": "left", "paddingLeft": "5px", "paddingRight": "5px", "paddingTop": "0px", "display": "block" }}>
                         <div>
                             Broj zahteva <input type="number"
                                 className="form-control"
@@ -272,7 +271,7 @@ export class Aneks extends Component {
                         <br />
                     </div>
 
-                    <div className="card col-12 col-lg-4 login-card mt-2 hv-center" style={{ "float": "right", "paddingLeft": "5px", "paddingRight": "5px", "paddingTop": "0px", "display": "block" }}>
+                    <div className="card col-12 col-lg-5 login-card mt-2 hv-center" style={{ "float": "right", "paddingLeft": "5px", "paddingRight": "5px", "paddingTop": "0px", "display": "block" }}>
 
                         <div>
                             Naziv i broj GPL <input type="text" className="form-control" ref="nazivBrojGPL" name="nazivBrojGPL" readOnly />
@@ -338,7 +337,7 @@ export class Aneks extends Component {
                         <div className="form-row">
                             <div className="form-group col-md-12">
                                 Krajnji rok otplate (važnosti) plasmana: <input type="text" className="form-control" ref="krajnjiRok" name="krajnjiRok" />
-                            </div>                          
+                            </div>
                         </div>
                         <br />
                         <div className="form-row">
@@ -381,10 +380,8 @@ export class Aneks extends Component {
                 <br />
                 <br />
                 <fieldset>
-                    <div className="form-row">
-                        <div className="form-group col-md-12">
-                            <textarea className="form-control" ref="napomena" name="napomena" placeholder="Unesite napomenu" />
-                        </div>
+                    <div style={{ "float": "left", "display": "inline-block" }}>
+                        <label> Napomena:  <textarea className="form-control" type="text" rows="5" cols="200" ref="napomena" name="napomena" placeholder="Unesite napomenu" /> </label>
                     </div>
                 </fieldset>
                 <br />

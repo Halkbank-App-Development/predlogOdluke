@@ -197,6 +197,7 @@ namespace PredlogOdluke.DAL
                     //info.valutnaKurs = Convert.IsDBNull(dataReader["valutnaKurs"]) ? (string)null : (String)(dataReader["valutnaKurs"]);
                     info.datumUgovora = Convert.IsDBNull(dataReader["datumUgovora"]) ? (string)null : (String)(dataReader["datumUgovora"]);
                     info.datumInicijalneOdluke = Convert.IsDBNull(dataReader["datumInicijalneOdluke"]) ? (string)null : (String)(dataReader["datumInicijalneOdluke"]);
+                    info.status = Convert.IsDBNull(dataReader["statusOpis"]) ? (string)null : (String)(dataReader["statusOpis"]);
                     info.statusID = Convert.IsDBNull(dataReader["statusID"]) ? (Int16)0 : (Int16)(dataReader["statusID"]);
                     info.napomena = Convert.IsDBNull(dataReader["napomena"]) ? (string)null : (String)(dataReader["napomena"]);
                     info.poosebniUslovi = Convert.IsDBNull(dataReader["posebniUslovi"]) ? (string)null : (String)(dataReader["posebniUslovi"]);
